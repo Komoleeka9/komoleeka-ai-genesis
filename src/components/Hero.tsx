@@ -29,7 +29,7 @@ export function Hero() {
           {/* Profile Photo */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-border shadow-tech animate-float">
+              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-border shadow-tech">
                 <img
                   src="/lovable-uploads/23b2f2a5-7c75-45d1-b382-449f5b1647ff.png"
                   alt="Komoleeka Gostu - Generative AI Engineer"
