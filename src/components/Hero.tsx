@@ -25,23 +25,9 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Profile Photo */}
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-border shadow-tech">
-                <img
-                  src="/lovable-uploads/23b2f2a5-7c75-45d1-b382-449f5b1647ff.png"
-                  alt="Komoleeka Gostu - Generative AI Engineer"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-transparent via-tech-accent to-transparent opacity-20 animate-pulse-slow" />
-            </div>
-          </div>
-
+        <div className="flex justify-center">
           {/* Hero Content */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="text-center max-w-4xl">
             <div className="mb-6">
               <h1 className="font-montserrat font-black text-5xl md:text-6xl lg:text-7xl mb-4 leading-tight">
                 <span className="text-foreground">Komoleeka</span>
@@ -84,7 +70,7 @@ export function Hero() {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center">
               <div className="animate-bounce">
                 <ArrowDown className="h-6 w-6 text-muted-foreground" />
               </div>
