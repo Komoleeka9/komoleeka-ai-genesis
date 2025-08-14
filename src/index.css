@@ -125,9 +125,13 @@
   /* Portfolio Hero Button */
   .hire-button {
     @apply bg-hire-button text-primary-foreground border-2 border-hire-button;
-    @apply hover:bg-hire-button-hover hover:shadow-hire;
     @apply transition-all duration-500 ease-out;
     @apply relative overflow-hidden;
+  }
+  
+  .hire-button:hover {
+    @apply bg-hire-button-hover;
+    box-shadow: var(--shadow-hire);
   }
   
   .hire-button::before {
