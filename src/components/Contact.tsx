@@ -26,20 +26,31 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
+
+    // Build the WhatsApp message
+    const message = 
+      `New Contact Form Submission:%0A` +
+      `Name: ${formData.name}%0A` +
+      `Email: ${formData.email}%0A` +
+      `Subject: ${formData.subject}%0A` +
+      `Message: ${formData.message}`;
+
+    // Open WhatsApp (works on desktop & mobile)
+    const whatsappUrl = `https://wa.me/918999372410?text=${message}`;
+    window.open(whatsappUrl, "_blank");
+
+    // Also open email client with pre-filled info
     const mailtoLink = `mailto:komoleekagostu@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`;
-    
+        `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
+      )}`;
     window.location.href = mailtoLink;
-    
+
     toast({
-      title: "Opening email client...",
-      description: "Your default email client will open with the message pre-filled.",
+      title: "Opening WhatsApp and email client...",
+      description: "Your WhatsApp and email client will open with the message pre-filled.",
     });
 
-    // Reset form
+    // Reset the form
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
@@ -113,7 +124,6 @@ export function Contact() {
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-tech-accent to-foreground mx-auto rounded-full mt-6" />
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
@@ -240,7 +250,6 @@ export function Contact() {
                         />
                       </div>
                     </div>
-
                     <div>
                       <label className="text-sm font-semibold text-foreground mb-2 block">
                         Subject *
@@ -254,7 +263,6 @@ export function Contact() {
                         className="w-full"
                       />
                     </div>
-
                     <div>
                       <label className="text-sm font-semibold text-foreground mb-2 block">
                         Message *
@@ -268,7 +276,6 @@ export function Contact() {
                         className="w-full min-h-[120px] resize-none"
                       />
                     </div>
-
                     <Button
                       type="submit"
                       className="hire-button w-full font-montserrat font-bold text-lg py-4 group"
