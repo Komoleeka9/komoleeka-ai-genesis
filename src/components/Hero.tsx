@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mail } from "lucide-react";
 
@@ -30,14 +29,14 @@ export function Hero() {
           {/* Profile Photo */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-border shadow-tech">
+              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-border shadow-tech animate-float">
                 <img
-                  src="/lovable-uploads/083c3e93-45d5-4ec2-9d0f-01e23de63086.png"
+                  src="/lovable-uploads/23b2f2a5-7c75-45d1-b382-449f5b1647ff.png"
                   alt="Komoleeka Gostu - Generative AI Engineer"
-                  className="w-full h-full object-cover object-center scale-110"
-                  style={{ objectPosition: "center 20%" }}
+                  className="w-full h-full object-cover"
                 />
               </div>
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-transparent via-tech-accent to-transparent opacity-20 animate-pulse-slow" />
             </div>
           </div>
 

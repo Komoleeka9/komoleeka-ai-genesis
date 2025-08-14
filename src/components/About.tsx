@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Code, Brain, Zap } from "lucide-react";
 
@@ -75,10 +74,9 @@ export function About() {
               <div className="relative">
                 <div className="w-72 h-72 rounded-2xl overflow-hidden shadow-tech border-2 border-border">
                   <img
-                    src="/lovable-uploads/083c3e93-45d5-4ec2-9d0f-01e23de63086.png"
+                    src="/lovable-uploads/23b2f2a5-7c75-45d1-b382-449f5b1647ff.png"
                     alt="Komoleeka Gostu Professional Photo"
-                    className="w-full h-full object-cover object-center scale-110"
-                    style={{ objectPosition: "center 20%" }}
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-tech-accent/20 to-foreground/20 rounded-2xl -z-10 animate-pulse-slow" />
