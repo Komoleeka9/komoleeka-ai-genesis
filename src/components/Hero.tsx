@@ -30,7 +30,7 @@ export function Hero() {
           {/* Profile Photo */}
           <div className="flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-border shadow-tech animate-float">
+              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-border shadow-tech">
                 <img
                   src="/lovable-uploads/083c3e93-45d5-4ec2-9d0f-01e23de63086.png"
                   alt="Komoleeka Gostu - Generative AI Engineer"
@@ -38,7 +38,6 @@ export function Hero() {
                   style={{ objectPosition: "center 20%" }}
                 />
               </div>
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-transparent via-tech-accent to-transparent opacity-20 animate-pulse-slow" />
             </div>
           </div>
 
