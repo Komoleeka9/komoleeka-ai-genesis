@@ -183,7 +183,7 @@ export function Certifications() {
                 
                 <Button 
                   className="hire-button font-montserrat font-semibold"
-                  onClick={() => window.open("https://drive.google.com", "_blank")}
+                  onClick={() => window.open("https://drive.google.com/drive/folders/1QRLC_pbXIAOmnxEDZO_lhzA-kactFq_M?usp=sharing", "_blank")}
                 >
                   <ExternalLink className="h-4 w-4 mr-2" />
                   View Full Portfolio
