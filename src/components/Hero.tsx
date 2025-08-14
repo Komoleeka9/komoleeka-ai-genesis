@@ -35,7 +35,7 @@ export function Hero() {
                 <span className="text-gradient">Gostu</span>
               </h1>
               <h2 className="font-montserrat font-bold text-2xl md:text-3xl text-tech-accent mb-6">
-                Generative AI Engineer & ML Developer
+                Aspiring Generative AI Engineer & ML Developer
               </h2>
             </div>
 
