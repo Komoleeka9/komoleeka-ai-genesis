@@ -1,91 +1,103 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Code, Brain, Bot, Heart, Mic, Cpu } from "lucide-react";
+import { ExternalLink, Github, Brain, Bot, Search, Eye, BarChart, FileText } from "lucide-react";
 
 export function Projects() {
   const projects = [
     {
-      title: "GenAI Retrieval QA System",
-      description: "Built a retrieval-augmented QA pipeline for enterprise search using LLMs and vector databases with high accuracy question answering capabilities.",
-      technologies: ["LangChain", "FAISS", "OpenAI", "Vector DB"],
+      title: "RAG-Based Document Q&A System",
+      description:
+        "Full-stack GenAI application that lets users upload documents and ask natural language questions. Built a production-grade retrieval-augmented generation pipeline with semantic search and context-aware LLM responses.",
+      technologies: ["LangChain", "FAISS", "Gemini 1.5 Flash", "FastAPI", "React", "Python"],
       icon: Brain,
       category: "Generative AI",
+      githubUrl: "https://github.com/komoleekag",
       features: [
-        "Enterprise-grade RAG pipeline",
-        "Vector similarity search",
-        "Context-aware responses"
+        "Semantic vector search with FAISS",
+        "Context-aware answers via Gemini 1.5 Flash",
+        "FastAPI backend + React frontend"
       ]
     },
     {
-      title: "Radio-Diagnostic Prediction System",
-      description: "Implemented ML classification models for medical image prediction and early disease detection with high precision diagnostic capabilities.",
-      technologies: ["Python", "TensorFlow", "Medical Imaging", "ML"],
-      icon: Heart,
-      category: "Medical AI",
+      title: "Autonomous Research Agent",
+      description:
+        "Agentic AI system that autonomously browses, retrieves, and synthesises information from the web to answer complex research queries — powered by LangChain and Tavily API.",
+      technologies: ["LangChain", "Tavily API", "Python", "Agentic AI", "OpenAI"],
+      icon: Search,
+      category: "Agentic AI",
+      githubUrl: "https://github.com/komoleekag",
       features: [
-        "Medical image analysis",
-        "Early disease detection",
-        "Clinical decision support"
+        "Multi-step autonomous web search",
+        "LangChain agent orchestration",
+        "Synthesised, sourced summaries"
       ]
     },
     {
-      title: "RoboAdvisory Investment Platform",
-      description: "Developing a chatbot-based investment platform for personalized portfolio recommendations using AI-driven financial analysis.",
-      technologies: ["Python", "Finance API", "Chatbot", "Portfolio Management"],
-      icon: Bot,
-      category: "FinTech AI",
+      title: "Medical Image Analysis (YOLOv8 + ResNet-50)",
+      description:
+        "Deep learning pipeline for medical condition detection using YOLOv8 object detection and ResNet-50/EfficientNetV2 classification — developed during R&D internship at Lisys Technocraft LLP.",
+      technologies: ["YOLOv8", "ResNet-50", "EfficientNetV2", "TensorFlow", "Python", "OpenCV"],
+      icon: Eye,
+      category: "Computer Vision",
+      githubUrl: "https://github.com/komoleekag",
       features: [
-        "Personalized recommendations",
-        "Risk assessment algorithms",
-        "Portfolio optimization"
+        "YOLO-based real-time detection",
+        "ResNet-50 classification pipeline",
+        "Medical domain performance benchmarking"
+      ]
+    },
+    {
+      title: "Drug Efficacy Prediction (ML Research)",
+      description:
+        "Predictive ML models for assessing drug efficacy in neurological disorder and breast cancer research — built during university research internship with full EDA and feature engineering pipeline.",
+      technologies: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Matplotlib", "Healthcare AI"],
+      icon: BarChart,
+      category: "Healthcare AI",
+      githubUrl: "https://github.com/komoleekag",
+      features: [
+        "Multi-model comparison and evaluation",
+        "Advanced EDA and feature engineering",
+        "Clinical outcome prediction"
       ]
     },
     {
       title: "Translation & Speech Recognition System",
-      description: "Developed an AI-based speech translation system for multilingual conversation with real-time processing capabilities.",
-      technologies: ["NLP", "Speech Recognition", "Translation API", "ML"],
-      icon: Mic,
+      description:
+        "AI-powered multilingual speech translation system enabling real-time speech-to-speech conversion across languages using NLP and speech recognition APIs.",
+      technologies: ["NLP", "Speech Recognition", "Translation API", "Python", "ML"],
+      icon: FileText,
       category: "NLP",
+      githubUrl: "https://github.com/komoleekag",
       features: [
-        "Real-time translation",
-        "Multi-language support",
-        "Speech-to-speech conversion"
-      ]
-    },
-    {
-      title: "Arduino Robotic Arm",
-      description: "Engineered a robotic arm with precision control using embedded systems for automated task execution.",
-      technologies: ["Arduino", "C++", "Servo Control", "Embedded Systems"],
-      icon: Cpu,
-      category: "Hardware",
-      features: [
-        "Precision servo control",
-        "Automated task execution",
-        "Real-time feedback systems"
-      ]
-    },
-    {
-      title: "AI Code Assistant",
-      description: "Built an intelligent code generation and review assistant using large language models for developer productivity enhancement.",
-      technologies: ["OpenAI", "Code Analysis", "Python", "API Integration"],
-      icon: Code,
-      category: "Developer Tools",
-      features: [
-        "Intelligent code generation",
-        "Automated code review",
+        "Real-time multilingual translation",
+        "Speech-to-speech pipeline",
         "Multi-language support"
+      ]
+    },
+    {
+      title: "RoboAdvisory Investment Platform",
+      description:
+        "Chatbot-driven investment platform that provides personalised portfolio recommendations and risk assessments using AI-driven financial analysis and conversational UI.",
+      technologies: ["Python", "Chatbot", "Finance API", "Portfolio Management", "ML"],
+      icon: Bot,
+      category: "FinTech AI",
+      githubUrl: "https://github.com/komoleekag",
+      features: [
+        "AI-driven portfolio recommendations",
+        "Risk profile assessment",
+        "Conversational investment interface"
       ]
     }
   ];
 
-  const categoryColors = {
+  const categoryColors: Record<string, string> = {
     "Generative AI": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-    "Medical AI": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-    "FinTech AI": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-    "NLP": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-    "Hardware": "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
-    "Developer Tools": "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+    "Agentic AI": "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
+    "Computer Vision": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+    "Healthcare AI": "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
+    "NLP": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+    "FinTech AI": "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
   };
 
   return (
@@ -98,7 +110,7 @@ export function Projects() {
               Featured Projects
             </h2>
             <p className="font-roboto text-xl text-muted-foreground max-w-3xl mx-auto">
-              Innovative AI solutions spanning healthcare, finance, and cutting-edge technology
+              Real-world GenAI and ML applications — from RAG pipelines to agentic systems and medical AI
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-tech-accent to-foreground mx-auto rounded-full mt-6" />
           </div>
@@ -112,11 +124,11 @@ export function Projects() {
                     <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-tech-accent group-hover:text-primary-foreground transition-all duration-300">
                       <project.icon className="h-6 w-6" />
                     </div>
-                    <Badge className={`text-xs ${categoryColors[project.category as keyof typeof categoryColors]}`}>
+                    <Badge className={`text-xs ${categoryColors[project.category]}`}>
                       {project.category}
                     </Badge>
                   </div>
-                  
+
                   <CardTitle className="font-montserrat font-bold text-xl text-foreground group-hover:text-tech-accent transition-colors">
                     {project.title}
                   </CardTitle>
@@ -127,7 +139,6 @@ export function Projects() {
                     {project.description}
                   </p>
 
-                  {/* Features */}
                   <div className="mb-6">
                     <h4 className="font-montserrat font-semibold text-sm mb-3 text-foreground">Key Features:</h4>
                     <ul className="space-y-1">
@@ -140,27 +151,22 @@ export function Projects() {
                     </ul>
                   </div>
 
-                  {/* Technologies */}
                   <div className="mb-6">
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
-                        <Badge
-                          key={techIndex}
-                          variant="outline"
-                          className="text-xs"
-                        >
+                        <Badge key={techIndex} variant="outline" className="text-xs">
                           {tech}
                         </Badge>
                       ))}
                     </div>
                   </div>
 
-                  {/* Action Buttons */}
                   <div className="flex gap-2 mt-auto">
                     <Button
                       variant="outline"
                       size="sm"
                       className="flex-1 group/btn"
+                      onClick={() => window.open(project.githubUrl, "_blank")}
                     >
                       <Github className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform" />
                       Code
@@ -169,9 +175,10 @@ export function Projects() {
                       variant="outline"
                       size="sm"
                       className="flex-1 group/btn"
+                      onClick={() => window.open("https://github.com/komoleekag", "_blank")}
                     >
                       <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                      Demo
+                      View
                     </Button>
                   </div>
                 </CardContent>
@@ -179,23 +186,23 @@ export function Projects() {
             ))}
           </div>
 
-          {/* Call to Action */}
+          {/* GitHub CTA */}
           <div className="text-center mt-16">
             <div className="inline-flex items-center gap-4 bg-card border border-border rounded-2xl p-6 shadow-tech">
               <div className="text-4xl animate-bounce">🚀</div>
               <div className="text-left">
                 <h3 className="font-montserrat font-bold text-xl text-foreground">
-                  Ready to Build Something Amazing?
+                  26+ Repositories on GitHub
                 </h3>
                 <p className="text-muted-foreground">
-                  Let's collaborate on your next AI project
+                  Explore more projects, experiments, and GenAI builds
                 </p>
               </div>
-              <Button 
+              <Button
                 className="hire-button font-montserrat font-semibold"
-                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => window.open("https://github.com/komoleekag", "_blank")}
               >
-                Get In Touch
+                View GitHub
               </Button>
             </div>
           </div>
