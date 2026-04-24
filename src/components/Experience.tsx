@@ -5,30 +5,43 @@ import { Calendar, MapPin, Building } from "lucide-react";
 export function Experience() {
   const experiences = [
     {
-      title: "Research & Development Intern (AI/ML)",
-      company: "Lisys Technocraft LLP",
-      location: "Pune",
-      duration: "June 2024 - Sep 2024",
-      type: "Internship",
-      achievements: [
-        "Implemented deep learning models (ResNet-50, EfficientNetV2) for precise medical image analysis",
-        "Developed YOLO-based models for detecting medical conditions with high accuracy",
-        "Conducted comprehensive model evaluation and performance optimization"
-      ],
-      skills: ["Deep Learning", "Computer Vision", "Medical AI", "YOLO", "ResNet", "EfficientNet"]
-    },
-    {
-      title: "Research & Development Intern (Machine Learning)",
+      title: "Teaching Associate — AI & Data Science",
       company: "D.Y. Patil International University",
       location: "Pune",
-      duration: "May 2023 - Aug 2023",
+      duration: "Aug 2024 – Feb 2025",
+      type: "Teaching",
+      achievements: [
+        "Assisted faculty in delivering AI and Data Science coursework to undergraduate students",
+        "Conducted lab sessions, graded assignments, and supported project mentorship",
+        "Gained 6 months of structured academic and applied AI teaching experience"
+      ],
+      skills: ["AI Education", "Data Science", "Python", "Mentorship", "Curriculum Support"]
+    },
+    {
+      title: "R&D Intern — AI/ML (Computer Vision)",
+      company: "Lisys Technocraft LLP",
+      location: "Pune",
+      duration: "Jun 2024 – Sep 2024",
+      type: "Internship",
+      achievements: [
+        "Implemented deep learning models (ResNet-50, EfficientNetV2) for medical image classification",
+        "Developed YOLOv8-based detection models for identifying medical conditions with high precision",
+        "Conducted model evaluation, performance benchmarking, and iterative optimization"
+      ],
+      skills: ["YOLOv8", "ResNet-50", "EfficientNetV2", "Computer Vision", "Medical AI", "Python", "TensorFlow"]
+    },
+    {
+      title: "Research Intern — Machine Learning",
+      company: "D.Y. Patil International University",
+      location: "Pune",
+      duration: "May 2023 – Aug 2023",
       type: "Research",
       achievements: [
-        "Developed predictive ML models for drug efficacy assessment",
-        "Researched AI applications in neurological disorders and breast cancer treatments",
-        "Applied advanced data preprocessing and exploratory data analysis techniques"
+        "Built predictive ML models for drug efficacy assessment in neurological disorder research",
+        "Researched AI applications for breast cancer treatment outcome prediction",
+        "Applied advanced data preprocessing, EDA, and feature engineering techniques"
       ],
-      skills: ["Machine Learning", "Medical Research", "Data Analysis", "Python", "Healthcare AI"]
+      skills: ["Machine Learning", "Healthcare AI", "Data Analysis", "Python", "Scikit-Learn", "EDA"]
     }
   ];
 
@@ -42,17 +55,15 @@ export function Experience() {
               Professional Experience
             </h2>
             <p className="font-roboto text-xl text-muted-foreground">
-              Building AI solutions in research and industry settings
+              Research, industry internships, and hands-on AI teaching
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-tech-accent to-foreground mx-auto rounded-full mt-6" />
           </div>
 
           {/* Timeline */}
           <div className="relative">
-            {/* Timeline Line */}
             <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-border" />
 
-            {/* Experience Cards */}
             <div className="space-y-12">
               {experiences.map((exp, index) => (
                 <div
@@ -61,10 +72,8 @@ export function Experience() {
                     index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
-                  {/* Timeline Dot */}
                   <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-tech-accent rounded-full border-4 border-background shadow-lg animate-pulse-slow" />
 
-                  {/* Content */}
                   <div className={`ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? "" : "md:text-right"}`}>
                     <Card className="tech-card">
                       <CardHeader>
@@ -73,11 +82,11 @@ export function Experience() {
                             {exp.type}
                           </Badge>
                         </div>
-                        
+
                         <CardTitle className="font-montserrat font-bold text-xl text-foreground mb-2">
                           {exp.title}
                         </CardTitle>
-                        
+
                         <div className="space-y-2 text-sm text-muted-foreground">
                           <div className="flex items-center gap-2">
                             <Building className="h-4 w-4" />
@@ -93,7 +102,7 @@ export function Experience() {
                           </div>
                         </div>
                       </CardHeader>
-                      
+
                       <CardContent>
                         <div className="space-y-4">
                           <ul className="space-y-2">
@@ -104,14 +113,10 @@ export function Experience() {
                               </li>
                             ))}
                           </ul>
-                          
+
                           <div className="flex flex-wrap gap-2 pt-4 border-t border-border">
                             {exp.skills.map((skill, skillIndex) => (
-                              <Badge
-                                key={skillIndex}
-                                variant="secondary"
-                                className="text-xs"
-                              >
+                              <Badge key={skillIndex} variant="secondary" className="text-xs">
                                 {skill}
                               </Badge>
                             ))}
@@ -130,7 +135,7 @@ export function Experience() {
             <h3 className="font-montserrat font-bold text-2xl md:text-3xl text-center mb-12 text-foreground">
               Education
             </h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="tech-card">
                 <CardContent className="p-6">
@@ -138,14 +143,14 @@ export function Experience() {
                     <h4 className="font-montserrat font-bold text-lg mb-2 text-foreground">
                       D.Y. Patil International University
                     </h4>
-                    <p className="text-muted-foreground mb-2">
-                      Bachelor of Technology (B.Tech) in Computer Science and Engineering
+                    <p className="text-muted-foreground mb-1">
+                      B.Tech — Computer Science & Engineering
                     </p>
                     <p className="text-sm text-muted-foreground mb-4">
-                      Minor: Artificial Intelligence and Machine Learning
+                      Minor: Artificial Intelligence & Machine Learning
                     </p>
                     <Badge className="bg-tech-accent text-primary-foreground">
-                      2021 - 2025 (Expected)
+                      2021 – 2025
                     </Badge>
                   </div>
                 </CardContent>
@@ -155,16 +160,16 @@ export function Experience() {
                 <CardContent className="p-6">
                   <div className="text-center">
                     <h4 className="font-montserrat font-bold text-lg mb-2 text-foreground">
-                      Sanjay Ghodawat IIT and Medical Academy
+                      Sanjay Ghodawat IIT & Medical Academy
                     </h4>
                     <p className="text-muted-foreground mb-2">
-                      Maharashtra State Board
+                      Maharashtra State Board — HSC
                     </p>
                     <p className="text-sm text-muted-foreground mb-4">
                       Percentage: 82%
                     </p>
                     <Badge className="bg-tech-accent text-primary-foreground">
-                      2020 - 2021
+                      2020 – 2021
                     </Badge>
                   </div>
                 </CardContent>
