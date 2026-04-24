@@ -28,11 +28,14 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             {/* Brand */}
             <div className="text-center md:text-left">
-              <h3 className="font-montserrat font-bold text-xl text-foreground mb-2">
+              <h3 className="font-montserrat font-bold text-xl text-foreground mb-1">
                 Komoleeka Gostu
               </h3>
-              <p className="text-muted-foreground">
-                Generative AI Engineer & ML Developer
+              <p className="text-muted-foreground text-sm">
+                GenAI Ops · Prompt Engineering · AI Product
+              </p>
+              <p className="text-muted-foreground text-xs mt-1">
+                Pune, India — Immediate Joiner
               </p>
             </div>
 
@@ -58,18 +61,17 @@ export function Footer() {
                 © {currentYear} Komoleeka Gostu
               </p>
               <p className="text-muted-foreground text-sm flex items-center justify-center md:justify-end gap-1 mt-1">
-                Site designed with <Heart className="h-4 w-4 text-red-500" /> by Komoleeka Gostu
+                Built with <Heart className="h-4 w-4 text-red-500" /> by Komoleeka Gostu
               </p>
               <p className="text-tech-accent text-xs mt-1 font-semibold">
-                Empowered by AI
+                Powered by GenAI Curiosity
               </p>
             </div>
           </div>
 
-          {/* Bottom Border */}
           <div className="mt-8 pt-8 border-t border-border text-center">
             <p className="text-muted-foreground text-sm">
-              Building the future of AI, one innovation at a time.
+              Open to GenAI ops, AI product, prompt engineering & data analytics roles · India & International
             </p>
           </div>
         </div>
