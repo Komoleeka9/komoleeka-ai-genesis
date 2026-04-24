@@ -5,23 +5,23 @@ export function About() {
   const highlights = [
     {
       icon: GraduationCap,
-      title: "B.Tech Computer Science",
-      description: "AI/ML Specialization, Final Year"
+      title: "B.Tech CSE + Minor AI & ML",
+      description: "D.Y. Patil International University, Pune — 2025 Graduate"
     },
     {
       icon: Brain,
-      title: "GenAI Expert",
-      description: "LLMs, RAG, Prompt Engineering"
+      title: "GenAI & LLM Focus",
+      description: "RAG Pipelines, Prompt Engineering, LangChain, FAISS"
     },
     {
       icon: Code,
-      title: "Full-Stack AI",
-      description: "Python, Cloud, Production Systems"
+      title: "Hands-On Builder",
+      description: "Python, FastAPI, Streamlit, Azure AI, Databricks"
     },
     {
       icon: Zap,
-      title: "Innovation Driven",
-      description: "Cutting-edge AI Solutions"
+      title: "Immediate Joiner",
+      description: "Open to GenAI ops, AI product & prompt engineering roles"
     }
   ];
 
@@ -42,29 +42,31 @@ export function About() {
             {/* Bio Text */}
             <div className="space-y-6">
               <h3 className="font-montserrat font-bold text-2xl md:text-3xl text-foreground">
-                Building the Future with AI
+                Turning AI Curiosity into Real Products
               </h3>
-              
+
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I'm <span className="text-foreground font-semibold">Komoleeka Gostu</span>, 
-                  a B.Tech Computer Science (AI/ML) final year student who builds and deploys 
-                  state-of-the-art GenAI and ML applications.
+                  I'm <span className="text-foreground font-semibold">Komoleeka Gostu</span>, a 2025
+                  B.Tech Computer Science & Engineering graduate with a{" "}
+                  <span className="text-foreground font-semibold">Minor in AI & ML</span> from
+                  D.Y. Patil International University, Pune.
                 </p>
-                
+
                 <p>
-                  Proficient in <span className="text-foreground font-semibold">Python</span>, 
-                  <span className="text-foreground font-semibold"> cloud technologies</span>, 
-                  <span className="text-foreground font-semibold"> NLP</span>, and 
-                  cutting-edge AI domains. I'm passionate about transforming ideas into robust 
-                  tech solutions and collaborating with innovative teams.
+                  I've built <span className="text-foreground font-semibold">RAG-based document Q&A
+                  systems</span>, an <span className="text-foreground font-semibold">Autonomous Research
+                  Agent</span> using LangChain and Tavily API, and applied computer vision in a medical AI
+                  internship at Lisys Technocraft LLP — all while maintaining a{" "}
+                  <span className="text-foreground font-semibold">26+ repository GitHub portfolio</span> and
+                  writing about AI on Medium.
                 </p>
-                
+
                 <p>
-                  Currently specializing in <span className="text-foreground font-semibold">
-                  Large Language Models</span>, <span className="text-foreground font-semibold">
-                  RAG systems</span>, and <span className="text-foreground font-semibold">
-                  prompt engineering</span> to create intelligent applications that solve real-world problems.
+                  I thrive at the intersection of <span className="text-foreground font-semibold">GenAI
+                  operations, AI product thinking, and prompt engineering</span> — turning complex LLM
+                  capabilities into practical, user-facing solutions. Based in Pune, open to Bangalore,
+                  Hyderabad, Chennai, and international (visa-sponsored) opportunities.
                 </p>
               </div>
             </div>
@@ -75,7 +77,7 @@ export function About() {
                 <div className="w-72 h-72 rounded-2xl overflow-hidden shadow-tech border-2 border-border">
                   <img
                     src="/lovable-uploads/23b2f2a5-7c75-45d1-b382-449f5b1647ff.png"
-                    alt="Komoleeka Gostu Professional Photo"
+                    alt="Komoleeka Gostu"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -97,9 +99,7 @@ export function About() {
                   <h4 className="font-montserrat font-bold text-lg mb-2 text-foreground">
                     {item.title}
                   </h4>
-                  <p className="text-muted-foreground text-sm">
-                    {item.description}
-                  </p>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
