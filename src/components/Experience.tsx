@@ -8,7 +8,7 @@ export function Experience() {
       title: "Teaching Associate — AI & Data Science",
       company: "D.Y. Patil International University",
       location: "Pune",
-      duration: "Aug 2024 – Feb 2025",
+      duration: "Sep 2025 – Feb 2026",
       type: "Teaching",
       achievements: [
         "Assisted faculty in delivering AI and Data Science coursework to undergraduate students",
