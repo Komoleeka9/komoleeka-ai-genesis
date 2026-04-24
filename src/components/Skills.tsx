@@ -5,32 +5,32 @@ export function Skills() {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["Python", "Java", "JavaScript", "HTML", "CSS", "SQL"],
+      skills: ["Python", "SQL", "JavaScript", "HTML", "CSS", "Java"],
       icon: "💻"
     },
     {
-      title: "AI/ML Frameworks",
-      skills: ["TensorFlow", "PyTorch", "Keras", "Streamlit", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"],
-      icon: "🧠"
-    },
-    {
-      title: "Generative AI & LLMs",
-      skills: ["LangChain", "FAISS", "OpenAI", "RAG Pipelines", "Prompt Engineering", "Vector Databases"],
+      title: "GenAI & LLMs",
+      skills: ["LangChain", "FAISS", "RAG Pipelines", "Prompt Engineering", "Gemini 1.5 Flash", "OpenAI APIs", "Vector Databases"],
       icon: "⚡"
     },
     {
-      title: "DevOps & Cloud",
-      skills: ["Git", "MATLAB", "PowerBI", "Excel", "REST APIs"],
+      title: "AI/ML Frameworks",
+      skills: ["TensorFlow", "Keras", "Scikit-Learn", "PyTorch", "YOLOv8", "Pandas", "NumPy", "Streamlit"],
+      icon: "🧠"
+    },
+    {
+      title: "Cloud & Infra",
+      skills: ["Azure AI Services", "Databricks", "FastAPI", "React", "REST APIs", "Git", "Docker (basics)"],
       icon: "☁️"
     },
     {
       title: "Domains",
-      skills: ["NLP", "Computer Vision", "Prompt Engineering", "Medical AI", "Financial AI"],
+      skills: ["NLP", "Computer Vision", "Medical AI", "Agentic AI", "Data Analytics", "Prompt Engineering"],
       icon: "🎯"
     },
     {
-      title: "Soft Skills",
-      skills: ["Leadership", "Communication", "Agile", "Critical Thinking", "Team Collaboration"],
+      title: "Soft Skills & Languages",
+      skills: ["Leadership", "Communication", "Critical Thinking", "Agile", "English", "Hindi", "Marathi"],
       icon: "🤝"
     }
   ];
@@ -45,7 +45,7 @@ export function Skills() {
               Skills & Technologies
             </h2>
             <p className="font-roboto text-xl text-muted-foreground max-w-3xl mx-auto">
-              A comprehensive toolkit for building next-generation AI applications
+              A practical toolkit for building GenAI applications, AI pipelines, and intelligent products
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-tech-accent to-foreground mx-auto rounded-full mt-6" />
           </div>
@@ -84,15 +84,15 @@ export function Skills() {
             <div className="inline-flex flex-wrap gap-4 justify-center items-center">
               <div className="flex items-center gap-2 bg-tech-accent text-primary-foreground px-6 py-3 rounded-full font-montserrat font-bold">
                 <span className="text-2xl">🔥</span>
-                <span>Generative AI Specialist</span>
+                <span>Databricks GenAI Certified</span>
               </div>
               <div className="flex items-center gap-2 bg-card border border-border px-6 py-3 rounded-full font-montserrat font-bold">
                 <span className="text-2xl">🚀</span>
-                <span>Production AI Systems</span>
+                <span>RAG & Agentic AI Builder</span>
               </div>
               <div className="flex items-center gap-2 bg-card border border-border px-6 py-3 rounded-full font-montserrat font-bold">
                 <span className="text-2xl">⭐</span>
-                <span>Research & Innovation</span>
+                <span>Azure AI-900 Certified</span>
               </div>
             </div>
           </div>
